@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83926644170F948E00A192E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83926643170F948E00A192E5 /* UIKit.framework */; };
+		83926646170F948E00A192E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83926645170F948E00A192E5 /* Foundation.framework */; };
+		83926648170F948E00A192E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83926647170F948E00A192E5 /* CoreGraphics.framework */; };
+		8392664E170F948E00A192E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8392664C170F948E00A192E5 /* InfoPlist.strings */; };
+		83926650170F948E00A192E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8392664F170F948E00A192E5 /* main.m */; };
+		83926654170F948E00A192E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83926653170F948E00A192E5 /* AppDelegate.m */; };
+		83926656170F948E00A192E5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 83926655170F948E00A192E5 /* Default.png */; };
+		83926658170F948E00A192E5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83926657170F948E00A192E5 /* Default@2x.png */; };
+		8392665A170F948E00A192E5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83926659170F948E00A192E5 /* Default-568h@2x.png */; };
+		8392665D170F948E00A192E5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8392665B170F948E00A192E5 /* MainStoryboard.storyboard */; };
+		83926660170F948E00A192E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8392665F170F948E00A192E5 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83926640170F948E00A192E5 /* BitSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83926643170F948E00A192E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		83926645170F948E00A192E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		83926647170F948E00A192E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8392664B170F948E00A192E5 /* BitSpot-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BitSpot-Info.plist"; sourceTree = "<group>"; };
+		8392664D170F948E00A192E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8392664F170F948E00A192E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83926651170F948E00A192E5 /* BitSpot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BitSpot-Prefix.pch"; sourceTree = "<group>"; };
+		83926652170F948E00A192E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		83926653170F948E00A192E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		83926655170F948E00A192E5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		83926657170F948E00A192E5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		83926659170F948E00A192E5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8392665C170F948E00A192E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		8392665E170F948E00A192E5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8392665F170F948E00A192E5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8392663D170F948E00A192E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83926644170F948E00A192E5 /* UIKit.framework in Frameworks */,
+				83926646170F948E00A192E5 /* Foundation.framework in Frameworks */,
+				83926648170F948E00A192E5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83926637170F948E00A192E5 = {
+			isa = PBXGroup;
+			children = (
+				83926649170F948E00A192E5 /* BitSpot */,
+				83926642170F948E00A192E5 /* Frameworks */,
+				83926641170F948E00A192E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83926641170F948E00A192E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83926640170F948E00A192E5 /* BitSpot.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83926642170F948E00A192E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83926643170F948E00A192E5 /* UIKit.framework */,
+				83926645170F948E00A192E5 /* Foundation.framework */,
+				83926647170F948E00A192E5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83926649170F948E00A192E5 /* BitSpot */ = {
+			isa = PBXGroup;
+			children = (
+				83926652170F948E00A192E5 /* AppDelegate.h */,
+				83926653170F948E00A192E5 /* AppDelegate.m */,
+				8392665B170F948E00A192E5 /* MainStoryboard.storyboard */,
+				8392665E170F948E00A192E5 /* ViewController.h */,
+				8392665F170F948E00A192E5 /* ViewController.m */,
+				8392664A170F948E00A192E5 /* Supporting Files */,
+			);
+			path = BitSpot;
+			sourceTree = "<group>";
+		};
+		8392664A170F948E00A192E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8392664B170F948E00A192E5 /* BitSpot-Info.plist */,
+				8392664C170F948E00A192E5 /* InfoPlist.strings */,
+				8392664F170F948E00A192E5 /* main.m */,
+				83926651170F948E00A192E5 /* BitSpot-Prefix.pch */,
+				83926655170F948E00A192E5 /* Default.png */,
+				83926657170F948E00A192E5 /* Default@2x.png */,
+				83926659170F948E00A192E5 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8392663F170F948E00A192E5 /* BitSpot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83926663170F948E00A192E5 /* Build configuration list for PBXNativeTarget "BitSpot" */;
+			buildPhases = (
+				8392663C170F948E00A192E5 /* Sources */,
+				8392663D170F948E00A192E5 /* Frameworks */,
+				8392663E170F948E00A192E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BitSpot;
+			productName = BitSpot;
+			productReference = 83926640170F948E00A192E5 /* BitSpot.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83926638170F948E00A192E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = ChrisVCo;
+			};
+			buildConfigurationList = 8392663B170F948E00A192E5 /* Build configuration list for PBXProject "BitSpot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 83926637170F948E00A192E5;
+			productRefGroup = 83926641170F948E00A192E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8392663F170F948E00A192E5 /* BitSpot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8392663E170F948E00A192E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8392664E170F948E00A192E5 /* InfoPlist.strings in Resources */,
+				83926656170F948E00A192E5 /* Default.png in Resources */,
+				83926658170F948E00A192E5 /* Default@2x.png in Resources */,
+				8392665A170F948E00A192E5 /* Default-568h@2x.png in Resources */,
+				8392665D170F948E00A192E5 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8392663C170F948E00A192E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83926650170F948E00A192E5 /* main.m in Sources */,
+				83926654170F948E00A192E5 /* AppDelegate.m in Sources */,
+				83926660170F948E00A192E5 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8392664C170F948E00A192E5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8392664D170F948E00A192E5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8392665B170F948E00A192E5 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8392665C170F948E00A192E5 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83926661170F948E00A192E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83926662170F948E00A192E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83926664170F948E00A192E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BitSpot/BitSpot-Prefix.pch";
+				INFOPLIST_FILE = "BitSpot/BitSpot-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		83926665170F948E00A192E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BitSpot/BitSpot-Prefix.pch";
+				INFOPLIST_FILE = "BitSpot/BitSpot-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8392663B170F948E00A192E5 /* Build configuration list for PBXProject "BitSpot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83926661170F948E00A192E5 /* Debug */,
+				83926662170F948E00A192E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83926663170F948E00A192E5 /* Build configuration list for PBXNativeTarget "BitSpot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83926664170F948E00A192E5 /* Debug */,
+				83926665170F948E00A192E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83926638170F948E00A192E5 /* Project object */;
+}
