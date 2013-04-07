@@ -7,7 +7,30 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface ViewController : UIViewController
+@class CurrencyTableViewController;
+
+@interface ViewController : UIViewController<ADBannerViewDelegate>{
+    NSMutableArray *currencies;
+    CurrencyTableViewController *curList;
+    UILabel *title, *details;
+    ADBannerView *bannerView;
+    UISwipeGestureRecognizer *swipeRec;
+    float BTCValue;
+}
+
+ @property (nonatomic)  BOOL viewingUSD;
+
+- (void) setAllCurrencies;
+
+- (void) setCurrencyBTC;
+- (void) setCurrencyBTCEUR;
+
+- (void) setCurrencyMetals;
+- (void) setCurrencyMetalsPalladium;
+
+- (void) convertUSDToBTC;
+- (void) convertBTCToUSD;
 
 @end
