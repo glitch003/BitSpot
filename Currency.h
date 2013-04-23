@@ -10,9 +10,6 @@
 
 @interface Currency : NSObject
 
-@property (nonatomic) NSString *name, *price;
-@property int idNum;
-@property float priceFloat;
-@property BOOL hasBeenSet;
+@property (nonatomic) NSString *name, *btcname, *price, *btcprice, *btcsuffix;
 
 @end

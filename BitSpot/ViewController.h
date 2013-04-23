@@ -14,23 +14,11 @@
 @interface ViewController : UIViewController<ADBannerViewDelegate>{
     NSMutableArray *currencies;
     CurrencyTableViewController *curList;
-    UILabel *title, *details;
+    UILabel *title;
     ADBannerView *bannerView;
-    UISwipeGestureRecognizer *swipeRec;
-    float BTCValue;
 }
+ @property (nonatomic) UILabel *details;
 
- @property (nonatomic)  BOOL viewingUSD;
-
-- (void) setAllCurrencies;
-
-- (void) setCurrencyBTC;
-- (void) setCurrencyBTCEUR;
-
-- (void) setCurrencyMetals;
-- (void) setCurrencyMetalsPalladium;
-
-- (void) convertUSDToBTC;
-- (void) convertBTCToUSD;
+- (void) downloadCurrencies;
 
 @end

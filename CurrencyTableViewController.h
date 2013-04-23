@@ -12,10 +12,14 @@
 
 @interface CurrencyTableViewController : UITableViewController{
     NSMutableArray *items;
+    BOOL viewingUSD;
+    NSDate *beginRefresh;
 }
 
 @property (nonatomic) ViewController *par;
 
+- (void) refreshAll;
 - (void) reloadTableData;
+
 
 @end

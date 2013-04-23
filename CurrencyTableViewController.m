@@ -24,20 +24,9 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        viewingUSD = YES;
     }
     return self;
-}
-- (void) reloadTableData{
-    [self.refreshControl performSelector:@selector(endRefreshing) withObject:Nil afterDelay:1];
-    
-    if(par.viewingUSD){
-        [par convertBTCToUSD];
-    }else{
-        [par convertUSDToBTC];
-    }
-    
-    
-    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad
@@ -54,18 +43,49 @@
                                         init];
     [refreshControl addTarget:self action:@selector(refreshAll) forControlEvents:UIControlEventValueChanged];
     refreshControl.tintColor = [UIColor grayColor];
-    [refreshControl setAttributedTitle:[[NSAttributedString alloc] initWithString:@"Pull to refresh all" ]];
     self.refreshControl = refreshControl;
+    [self.refreshControl setAttributedTitle:[[NSAttributedString alloc] initWithString:@"Loading..." ]];
+    [refreshControl beginRefreshing];
 }
 
-- (void) refreshAll{
-    [par setAllCurrencies];
-}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) refreshAll{
+    beginRefresh = [NSDate date];
+    [par downloadCurrencies];
+}
+
+- (void) reloadTableData{
+    double timePassed = [beginRefresh timeIntervalSinceNow] * -1000.0;
+    
+    NSLog(@"begin refresh: %f", timePassed);
+    
+    if(timePassed >= 1000){
+        //immediately end the spinning wheel
+        [self.refreshControl endRefreshing];
+    }else{
+        //wait a second to hide the spinning wheel
+        
+        //unless this is the first run
+        if([self.refreshControl.attributedTitle.string isEqualToString:@"Loading..."]){
+            [self.refreshControl endRefreshing];
+        }else{
+            [self.refreshControl performSelector:@selector(endRefreshing) withObject:Nil afterDelay:1];
+        }
+        
+           
+    }
+    
+    if([self.refreshControl.attributedTitle.string isEqualToString:@"Loading..."]){
+        [self.refreshControl performSelector:@selector(setAttributedTitle:) withObject:[[NSAttributedString alloc] initWithString:@"Pull to refresh" ] afterDelay:0.5];
+    }
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -96,7 +116,6 @@
     }
     // Configure the cell...
     if([indexPath row] < [ad.currencies count]){
-        cell.textLabel.text = ((Currency*)[ad.currencies objectAtIndex:[indexPath row]]).name;
         cell.textLabel.font = [UIFont boldSystemFontOfSize:16];
         
         UILabel *price;
@@ -109,11 +128,18 @@
         price.font = [UIFont systemFontOfSize:14];
         price.backgroundColor = [UIColor clearColor];
         price.frame = CGRectMake(0, 0, cell.bounds.size.width - 30, cell.bounds.size.height);
-        price.text = ((Currency*)[ad.currencies objectAtIndex:[indexPath row]]).price;
         price.textAlignment = NSTextAlignmentRight;
         price.tag = 3;
         
-        
+        Currency *c = ((Currency*)[ad.currencies objectAtIndex:[indexPath row]]);
+        if(viewingUSD){
+            cell.textLabel.text = c.name;
+            price.text = c.price;
+        }else{
+            cell.textLabel.text = c.btcname;
+            price.text = [NSString stringWithFormat:@"%@%@",c.btcprice, c.btcsuffix];
+        }
+
     }
     
     
@@ -163,28 +189,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-
     
-    
-    //[tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    Currency *c = [ad.currencies objectAtIndex:[indexPath row]];
-    c.price = @"Loading...";
-    [self reloadTableData];
-    
-    if(c.idNum == 0 || c.idNum == 1 || c.idNum == 3 || c.idNum == 4){
-        [par setCurrencyBTC];
-    }else if(c.idNum == 2){
-        [par setCurrencyBTCEUR];
-    }else if(c.idNum == 5 || c.idNum == 6 || c.idNum == 8 || c.idNum == 9){
-        [par setCurrencyMetals];
-    }else if(c.idNum == 7){
-        [par setCurrencyMetalsPalladium];
+    if(viewingUSD){
+        par.details.text = @"Tap to change to USD.";
+        viewingUSD = NO;
+    }else{
+        par.details.text = @"Tap to change to BTC.";
+        viewingUSD = YES;
     }
-    
-    
-   
+    [self reloadTableData];
     
     // Navigation logic may go here. Create and push another view controller.
     /*
